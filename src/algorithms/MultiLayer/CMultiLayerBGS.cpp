@@ -1230,7 +1230,7 @@ void CMultiLayerBGS::GetBgLayerNoImage(IplImage *bg_layer_no_img, CvScalar *laye
     rgb[0] = rgb[1] = rgb[2] = 0;
     int rgb_idx = 0;
     for (int l = 0; l < bg_layer_color_num; l++) {
-      bg_layer_colors[l] = CV_RGB(rgb[0], rgb[1], rgb[2]);
+      bg_layer_colors[l] = cvScalar(rgb[2], rgb[1], rgb[0], 0);
       rgb[rgb_idx] += 200;
       rgb[rgb_idx] %= 255;
       rgb_idx++;

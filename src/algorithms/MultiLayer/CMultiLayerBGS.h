@@ -131,14 +131,14 @@ namespace bgslibrary
         void SetCurrentFrameNumber(unsigned long cur_frame_no);
 
         void GetForegroundMaskImage(IplImage *fg_mask_img);
-        void GetForegroundImage(IplImage *fg_img, CvScalar bg_color = CV_RGB(0, 255, 0));
+        void GetForegroundImage(IplImage *fg_img, CvScalar bg_color = cvScalar(0, 255, 0, 0));
         void GetBackgroundImage(IplImage *bk_img);
         void GetForegroundProbabilityImage(IplImage* fg_prob_img);
 
         void GetBgLayerNoImage(IplImage *bg_layer_no_img, CvScalar* layer_colors = NULL, int layer_num = 0);
-        void GetLayeredBackgroundImage(int layered_no, IplImage *layered_bg_img, CvScalar empty_color = CV_RGB(0, 0, 0));
+        void GetLayeredBackgroundImage(int layered_no, IplImage *layered_bg_img, CvScalar empty_color = cvScalar(0, 0, 0, 0));
         void GetCurrentLayeredBackgroundImage(int layered_no, IplImage *layered_bg_img, IplImage *layered_fg_img = NULL,
-          CvScalar layered_bg_bk_color = CV_RGB(0, 0, 0), CvScalar layered_fg_color = CV_RGB(255, 0, 0),
+          CvScalar layered_bg_bk_color = cvScalar(0, 0, 0, 0), CvScalar layered_fg_color = cvScalar(0, 0, 255, 0),
           int smooth_win = 13, float smooth_sigma = 3.0f, float below_layer_noise = 0.5f, float above_layer_noise = 0.3f, int min_blob_size = 50);
         float DistLBP(LBPStruct *LBP1, LBPStruct *LBP2);
         void GetColoredBgMultiLayeredImage(IplImage *bg_multi_layer_img, CvScalar *layer_colors);

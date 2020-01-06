@@ -1284,7 +1284,7 @@ namespace bgslibrary
             Point1.y = y - Resulty / 2;
             Point2.x = x + Resultx / 2;
             Point2.y = y + Resulty / 2;
-            cvLine(ME_CAST_TO_IPLIMAGE(cvImg), Point1, Point2, CV_RGB(255, 255, 255), 1, 8);
+            cvLine(ME_CAST_TO_IPLIMAGE(cvImg), Point1, Point2, cvScalar(255, 255, 255, 0), 1, 8);
           }
       }
 
